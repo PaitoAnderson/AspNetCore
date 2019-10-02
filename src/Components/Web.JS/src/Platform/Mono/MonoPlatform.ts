@@ -212,7 +212,7 @@ function createEmscriptenModuleInstance(loadAssemblyUrls: string[], onReady: () 
 
   module.print = line => (suppressMessages.indexOf(line) < 0 && console.log(`WASM: ${line}`));
 
-  const errorUiReloads = document.querySelectorAll<HTMLElement>("#error-ui .reload");
+  const errorUiReloads = document.querySelectorAll<HTMLElement>('#error-ui .reload');
   errorUiReloads.forEach(reload => {
     reload.onclick = function (e) {
       location.reload();
@@ -220,10 +220,10 @@ function createEmscriptenModuleInstance(loadAssemblyUrls: string[], onReady: () 
     };
   });
 
-  let errorUiDismiss = document.querySelectorAll<HTMLElement>("#error-ui .dismiss");
+  let errorUiDismiss = document.querySelectorAll<HTMLElement>('#error-ui .dismiss');
   errorUiDismiss.forEach(dismiss => {
     dismiss.onclick = function (e) {
-      const errorUi = document.querySelector<HTMLElement>("#error-ui");
+      const errorUi = document.querySelector<HTMLElement>('#error-ui');
       if (errorUi) {
         errorUi.style.display = 'none';
       }
@@ -233,7 +233,7 @@ function createEmscriptenModuleInstance(loadAssemblyUrls: string[], onReady: () 
 
   module.printErr = line => {
     console.error(`WASM: ${line}`);
-    let errorUi = document.querySelector("#error-ui") as HTMLElement;
+    let errorUi = document.querySelector('#error-ui') as HTMLElement;
     if (errorUi) {
       errorUi.style.display = 'block';
     }
