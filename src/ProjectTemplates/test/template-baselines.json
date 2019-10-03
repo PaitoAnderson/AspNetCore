@@ -1253,7 +1253,6 @@
         "ClientApp/src/react-app-env.d.ts",
         "ClientApp/src/registerServiceWorker.ts",
         "ClientApp/.env",
-        "ClientApp/.eslintrc.json",
         "ClientApp/.gitignore",
         "ClientApp/package-lock.json",
         "ClientApp/package.json",
